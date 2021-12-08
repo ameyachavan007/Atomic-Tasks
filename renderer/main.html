@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atomic Tasks</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/ea3dc10706.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    <div class="all-tasks">
+    <h1 class="mainHeader">Atomic Tasks <span class="min-btn" id="min"><i class="fas fa-window-minimize"></i></span><span class="power-btn" id="power"><i class="fas fa-power-off power-btn"></i></span></h1>
+    
+    <h2 class="subHeading">Your daily notes that remind you</h2>
+<div class="first-form">
+    <ul class="task-list" data-lists></ul>
+
+    
+<form data-new-list-form>
+    <input type="text" class="new-list" placeholder="Add a new list..." aria-label="new-list-name" id="item"
+        data-new-list-input>
+    <button class="btn-list" aria-label="create-new-list">+</button>
+</form>
+    
+    </div>
+</div>
+
+    <div class="todo-list" data-list-display-container>
+        <div class="todo-header">
+            <h2 class="list-title" data-list-title></h2>
+            <p class="task-count" data-list-count></p>
+            
+        </div>
+
+        <div class="todo-body">
+            <div class="tasks" data-tasks></div>
+
+            <div class="new-task-creator">
+
+                <form data-new-task-form >
+                    <input type="text" class="new-list" placeholder="Add a new task..." aria-label="new-task-name" id="item" data-new-task-input>
+                    <button class="btn-list create" aria-label="create-new-task">+</button>
+                </form>
+            </div>
+
+            <div class="delete">
+                <button class="btn-delete" data-clear-complete-tasks-button>Clear checked tasks</button>
+                <button class="btn-delete" data-delete-list-btn>Delete list</button>
+            </div>
+        </div>
+    </div>
+    
+    <template id="task-template">
+        <div class="task">
+            <input type="checkbox" />
+            <label>
+                <span class="custom-checkbox"></span>
+            </label>
+        </div>
+    </template>
+    
+    <script>
+        require('./app')
+    </script>
+
+</body>
+</html>

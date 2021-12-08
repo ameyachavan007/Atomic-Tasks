@@ -1,0 +1,36 @@
+body {
+  background-color: #142743;
+  font-family: "Archivo Black", sans-serif;
+  user-select: none;
+}
+
+.loader {
+  animation: loadIn 0.6;
+}
+
+@keyframes loadIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+.sentence {
+  font-size: 45px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  opacity: 0.5;
+  color: #f1f5f7;
+}
+
+.app-name {
+  margin: 0;
+  font-size: 50px;
+  color: #ffa800;
+  opacity: 1;
+}

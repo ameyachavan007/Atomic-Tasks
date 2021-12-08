@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atomic Tasks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="onBoarding.css">
+    <script>
+        const remote = require('electron').remote
+        
+
+        let secWindow = remote.getCurrentWindow()
+
+        function redirectPage() {
+            secWindow.loadFile('renderer/main.html')
+        }
+        setTimeout('redirectPage()', 5000)
+
+        
+    </script>
+</head>
+<body>
+
+    <div class="loader">
+<p class="sentence">Let's get productive with </p>
+<p class="app-name">ATOMIC TASKS</p>
+
+    </div>
+    
+
+    
+    
+</body>
+</html>
